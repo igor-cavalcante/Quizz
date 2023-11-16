@@ -230,6 +230,8 @@ function answerQuestion(a){
 
         // Se foi um acerto, ganha pontos
         score+=Math.floor(2.2*questionTime);
+        //contador de questões acertadas
+        cont = cont + 1;
 
         // A opção selecionada fica verde para indicar o acerto
         options[a].classList.add("points-acerto");
