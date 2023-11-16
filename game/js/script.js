@@ -253,15 +253,46 @@ function answerQuestion(a){
     }, 500);
 };
 
+//tela do jogo 
+let gameScreen = document.querySelector("#container");
 // Tela final com o resultado
-let resultScreen = document.getElementById("result");
-
+let resultScreen = document.querySelector(".result-box");
 // Pontos finais
+ let finalScore = document.getElementById("final-points");
+//Pega a quantidade de acertos
+ let correctQuestions = document.querySelector(".score-text");
 
-let finalScore = document.getElementById("final-points");
+let circularProgress = document.querySelector(".circular-progress");
+let proguessValue = document.querySelector(".progress-value");
 
 // Função para mostrar o resultado final
 function result(){
-    finalScore.innerHTML = score;
+    // finalScore.innerHTML = score;
+    gameScreen.style.display = "none";
     resultScreen.style.display = "flex";
+    correctQuestions.textContent =`Voçê acertou ${cont} de 10 questões`;
+    let proguessStartValue = -1;
+    let proguessEndValue = score;
+    let speed = 16;
+    
+    let proguess = setInterval(() =>{
+            
+        proguessStartValue++;
+        proguessValue.textContent = `points ${proguessStartValue}`;
+        circularProgress.style.background = `conic-gradient(aqua ${(proguessStartValue / 10) * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
+        if(proguessStartValue == proguessEndValue){
+            clearInterval(proguess);
+        };
+        
+    },speed);
+
+}
+
+// funções para os botões da pagina final points 
+function returnGame() {
+    window.location.href = "../game/index.html";
+}
+
+function returnHome(){
+    window.location.href = "/index.html";
 }
