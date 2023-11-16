@@ -49,7 +49,7 @@
             </div>       
         </main>
     </div>
-    <div id="result">
+    <!-- <div id="result">
         <div>
             <p>Pontuação final:</p>
         </div>
@@ -57,7 +57,21 @@
             <p id="final-points">000</p>
         </div>
         <a class= "option" id = "return" href="../index.html">Voltar para pagina inicial</a> 
-    </div>
+    </div> -->
+    <div class="result-box">
+        <h2>Quizz Result!!</h2>
+        <div class="percentage-container">
+          <div class="circular-progress">
+            <span class="progress-value"></span>
+          </div>
+          <span class="score-text"></span>
+        </div>
+        <div class="buttons">
+          <button class="tryAgain-btn" onclick="returnGame()">Jogar Novamente</button>
+          <button class="goHome-btn" onclick="returnHome()">Voltar à Página Inicial</button>
+        </div>
+      </div>
+
     <script src="./js/script.js"></script>
 </body>
 </html>
