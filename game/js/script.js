@@ -217,12 +217,14 @@ function changeQuestion(){
    
 };
 
+cont = 0;
 // Função para responder a questão, com o parametro "a" que
 // representa a opção clicada
 function answerQuestion(a){
 
     // Mais uma questão foi respondida
     answered +=1;
+    
 
     // Se a opção escolhida for igual a opção correta
     // da lista de respostas, é um acerto, se não, é um erro
@@ -232,14 +234,13 @@ function answerQuestion(a){
         score+=Math.floor(2.2*questionTime);
         //contador de questões acertadas
         cont = cont + 1;
-
         // A opção selecionada fica verde para indicar o acerto
+        
         options[a].classList.add("points-acerto");
         setTimeout(function() {
             options[a].classList.remove("points-acerto");
         }, 500);
     }else{
-
         // Se foi um erro, a opção selecionada fica vermelha
         options[a].classList.add("points-error");
         setTimeout(function() {
@@ -254,7 +255,6 @@ function answerQuestion(a){
         scoreElement.innerText = score;
     }, 500);
 };
-
 //tela do jogo 
 let gameScreen = document.querySelector("#container");
 // Tela final com o resultado
@@ -275,7 +275,7 @@ function result(){
     correctQuestions.textContent =`Voçê acertou ${cont} de 10 questões`;
     let proguessStartValue = -1;
     let proguessEndValue = score;
-    let speed = 16;
+    let speed = 10;
     
     let proguess = setInterval(() =>{
             
