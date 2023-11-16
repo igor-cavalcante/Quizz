@@ -275,7 +275,7 @@ function result(){
     correctQuestions.textContent =`Voçê acertou ${cont} de 10 questões`;
     let proguessStartValue = -1;
     let proguessEndValue = score;
-    let speed = 10;
+    let speed = 12;
     
     let proguess = setInterval(() =>{
             
@@ -296,5 +296,5 @@ function returnGame() {
 }
 
 function returnHome(){
-    window.location.href = "/Quizz";
+    window.location.href = "/Quizz/index.html";
 }
