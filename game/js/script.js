@@ -296,5 +296,5 @@ function returnGame() {
 }
 
 function returnHome(){
-    window.location.href = "/index.html";
+    window.location.href = "./index.html";
 }
