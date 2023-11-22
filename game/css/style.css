@@ -83,38 +83,11 @@ body{
 }
 @keyframes erro{
     0%{
-        /* transform: translate(1px,2px) rotate(0deg); */
         border-color: rgb(255, 73, 73);
         color: rgb(255, 73, 73);
         background-color: #2b3137;
     }
-    /* 10%{
-        transform: translate(1px,-1px) rotate(-1deg);
-    }
-    20%{
-        transform: translate(1px,-2px) rotate(1deg);
-    }
-    30%{
-        transform: translate(1px,1px) rotate(-1deg);
-    }
-    40%{
-        transform: translate(-1px,2px) rotate(0deg);
-    }
-    50%{
-        transform: translate(-1px,1px) rotate(-1deg);
-    }
-    60%{
-        transform: translate(-1px,-2px) rotate(1deg);
-    }
-    70%{
-        transform: translate(0px,-1px) rotate(0deg);
-    }
-    80%{
-        transform: translate(2px,-2px) rotate(-1deg);
-    }
-    90%{
-        transform: translate(1px,1px) rotate(1deg);
-    } */
+
     100%{
         border-color: rgb(255, 73, 73);
         color: rgb(255, 73, 73);
@@ -159,26 +132,6 @@ body{
 .option:hover{
     background-color: #8b8b8b44;
 }
-/* 
-#result{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: #24292d;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 3em;
-}
-#final-points{
-    font-size: 2em;
-}
-
-#return{
-    color: #fff;
-} */
-
 
 .result-box{
     position: absolute;
@@ -193,12 +146,13 @@ body{
     padding: 20px;
     align-items: center;
     opacity: 1;
-    pointer-events:auto; 
+    pointer-events:auto;
+    gap: 30px;
     
   }
   
   .result-box h2{
-    font-size: 52px;
+    font-size: 3em;
   }
   
   .result-box .percentage-container{
@@ -206,7 +160,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin:20px 0 40px;
+    gap: 30px;
   }
   
   .percentage-container .circular-progress{
@@ -224,7 +178,7 @@ body{
     position: absolute;
     width: 210px;
     height: 210px;
-    background: black;
+    background-color: #2b3137;
     border-radius: 50%;
   }
   

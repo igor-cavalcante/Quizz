@@ -272,7 +272,7 @@ function result(){
     // finalScore.innerHTML = score;
     gameScreen.style.display = "none";
     resultScreen.style.display = "flex";
-    correctQuestions.textContent =`Voçê acertou ${cont} de 10 questões`;
+    correctQuestions.textContent =`Você acertou ${cont} de 10 questões`;
     let proguessStartValue = -1;
     let proguessEndValue = score;
     let speed = 12;
@@ -280,7 +280,7 @@ function result(){
     let proguess = setInterval(() =>{
             
         proguessStartValue++;
-        proguessValue.textContent = `points ${proguessStartValue}`;
+        proguessValue.textContent = `Pontos: ${proguessStartValue}`;
         circularProgress.style.background = `conic-gradient(aqua ${(proguessStartValue / 10) * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
         if(proguessStartValue == proguessEndValue){
             clearInterval(proguess);
