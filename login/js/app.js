@@ -69,5 +69,5 @@ function register(){
 }
 
 function returnHome(){
-    window.location.href = "../../index.html";
+    window.location.href = "https://igor-cavalcante.github.io/Quizz";
 }
