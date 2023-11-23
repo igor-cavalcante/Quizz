@@ -61,9 +61,14 @@ let questionsList = [
     "Qual propriedade CSS é usada para definir a largura de uma borda?",
     "Qual operador é usado para verificar a igualdade de valor e tipo em JavaScript?",
     "Qual tag HTML é usada para criar uma imagem?",
-    "Qual seletor CSS é usado para aplicar um estilo a todos os elementos de uma classe específica?",
+    "Qual seletor CSS é usado para aplicar um estilo a todos o elementos de uma classe específica?",
     "Qual função JavaScript é usada para imprimir mensagens no console?",
     "Qual atributo HTML é usado para definir o texto alternativo para uma imagem?",
+    "Qual função JavaScritp é usada para exibir um alerta na tela?",
+    "Qual seletor CSS é usado para aplicar um estilo a um elemento específico?",
+    "Qual deve ser o valor do atributo 'target' para que o elemento <a> abra o link em uma nova página?",
+    "Qual a tag usada semanticamente para definir um formulário em HTML?",
+    "Qual tag é usada semanticamente para definir o conteúdo principal de um HTML?"
 ];
 
 // Alternativas de cada questão
@@ -127,12 +132,42 @@ let q10 = [
     "c) description",
     "d) image-text"
 ];// correta: 0
+let q11 = [
+    "a) console.log()",
+    "b) print()",
+    "c) display()",
+    "d) alert()"
+];// correta: 3
+let q12 = [
+    "a) .",
+    "b) :",
+    "c) #",
+    "d) *"
+];// correta: 2
+let q13 = [
+    "a) _top",
+    "b) _self",
+    "c) _parent",
+    "d) _blank"
+];// correta: 3
+let q14 = [
+    "a) <formulario>",
+    "b) <forms>",
+    "c) <form>",
+    "d) </form"
+];// correta: 2
+let q15 = [
+    "a) <principal>",
+    "b) <content>",
+    "c) <main>",
+    "d) <article>"
+];// correta: 2
 
 // Lista de alternativas na mesma posição que sua respectiva questão
-let optionsList = [q1,q2,q3,q4,q5,q6,q7,q8,q9,q10];
+let optionsList = [q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15];
 
 // Lista de respostas na mesma posição que sua questão
-let answersList = [2,0,1,1,0,2,1,1,0,0];
+let answersList = [2,0,1,1,0,2,1,1,0,0,3,2,3,2,2];
 
 // Pega os elementos de opções
 let op1 = document.getElementById("op1");
@@ -146,7 +181,7 @@ let options = [op1,op2,op3,op4]
 
 //variauavel que amarzena os pontos
 const scoreElement = document.getElementById("points");
-let score = 1;
+let score = 0;
 
 // Variável pra armazenar o número da questão atual
 var keep = 0;
@@ -185,7 +220,7 @@ function changeQuestion(){
         // Math.random = 0.97
         // 0.97 * 10 = 9.7
         // Math.Floor(9.7) = 10
-        var random = Math.floor(Math.random() * 10);
+        var random = Math.floor(Math.random() * 15);
         
         // Se o index (Posição) da questão atual é menor que 0 significa que ela não
         // existe na lista noRepeat, ou seja, ainda não foi exibida. Se é maior ou igual a 0
@@ -231,7 +266,14 @@ function answerQuestion(a){
     if(a == answersList[keep]){
 
         // Se foi um acerto, ganha pontos
-        score+=Math.floor(2.2*questionTime);
+        if(questionTime>39 && questionTime<46){
+            score+=67;
+        }else{
+        score+=Math.floor(1.4*questionTime);
+        }
+        if(score>1000){
+            score=1000;
+        }
         //contador de questões acertadas
         cont = cont + 1;
         // A opção selecionada fica verde para indicar o acerto
@@ -272,7 +314,7 @@ function result(){
     // finalScore.innerHTML = score;
     gameScreen.style.display = "none";
     resultScreen.style.display = "flex";
-    correctQuestions.textContent =`Você acertou ${cont} de 10 questões`;
+    correctQuestions.textContent =`Você acertou ${cont} de 15 questões`;
     let proguessStartValue = -1;
     let proguessEndValue = score;
     let speed = 12;
@@ -296,5 +338,5 @@ function returnGame() {
 }
 
 function returnHome(){
-    window.location.href = "/Quizz/index.html";
+    window.location.href = "../index.html";
 }

@@ -511,47 +511,18 @@ input:-webkit-autofill
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.alerts{
+    position: absolute;
+    width: 100vw;
+    max-width: 700px;
+    padding: 10px;
+    border: solid 1px rgb(20, 153, 230);
+    background-color: #24292d;
+    border-radius: 10px;
+    color: #fff;
+    bottom: 20px;
+    z-index: 99;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
