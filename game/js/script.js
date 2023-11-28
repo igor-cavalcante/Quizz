@@ -340,3 +340,7 @@ function returnGame() {
 function returnHome(){
     window.location.href = "../index.html";
 }
+
+function shareGame(){
+    window.open("https://wa.me//?text=Tirei "+score+" pontos nesse jogo, vem testar seus conhecimentos também! (: igor-cavalcante.github.io/Quizz", "_blank");
+}

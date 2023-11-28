@@ -233,4 +233,13 @@ body{
    background: black;
     color: #fff;
   }
+  .buttons button:nth-child(3){
+    background: transparent;
+    color: aqua;
+  
+  }
+  .buttons button:nth-child(3):hover{
+   background: black;
+    color: #fff;
+  }
   /* fim */
