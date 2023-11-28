@@ -342,5 +342,5 @@ function returnHome(){
 }
 
 function shareGame(){
-    window.open("https://wa.me//?text=Tirei "+score+" pontos nesse jogo, vem testar seus conhecimentos também! (: igor-cavalcante.github.io/Quizz", "_blank");
+    window.open("https://wa.me//?text=Tirei "+score+"/1000 pontos nesse jogo, vem testar seus conhecimentos também! (: igor-cavalcante.github.io/Quizz", "_blank");
 }
