@@ -1,3 +1,4 @@
+/* estilo Geral */
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&display=swap');
 *{
     margin:0;
@@ -5,6 +6,13 @@
     box-sizing: border-box;
     font-family: 'Geologica', sans-serif;
 }
+.flex-btn{
+    display: flex;
+    gap: 10px;
+}
+
+/* estilo corpo da pagina */
+
 body{
     background-color: #24292d;
     color: #fff;
@@ -129,24 +137,19 @@ a{
 }
 
 @keyframes slides {
-    10%{
+    0%, 100% {
+        transform: translateY(0);
+    }
+    33% {
         transform: translateY(-100%);
     }
-    35%{
-        transform: translateY(-100%);
-    }
-    45%{
+    66% {
         transform: translateY(-200%);
     }
-    65%{
-        transform: translateY(-200%);
-    }
-    75%{
-        transform: translateY(-300%);
-    }
-    100%{
-        transform: translateY(-300%);
-    }
+}
+
+.div-slide {
+    animation: slides 6s infinite; /* ajuste a duração conforme necessário */
 }
 
 #html{
